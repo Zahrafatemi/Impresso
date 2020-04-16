@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--FAVICON -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <!-- IMPORTS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--TITLE-->
+    <title>Catering</title>
+</head>
+<body class="fade-in">
+    <div class="wrapper">
+        <div class="catering-wrapper">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a class="mobile" href="index.html"><img src="images/impresso-logo-mug.png" alt="Logo of Impresso for mobile display"></a>
+                    <a class="non-mobile" href="index.html"><img src="images/impresso-logo.png" alt="Logo of Impresso for screens larger than small mobile display"></a>
+                </div><!--end of logo-->
+                <button class="hamburger" id="hamburger">
+                        <span class="hamburger-content">
+                        <span class="text">Menu</span>
+                        <span class="bar"></span>
+                    </span><!-- end button-content -->
+                </button>
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="catering.html">Catering</a></li>
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div><!--end of menu-->
+            </div><!--end of nav bar-->
+            <header>
+                <h1 class="fade-up">Catering</h1>
+                <div class="catering-bg"></div>
+            </header>
+            <section>
+                <div class="catering-form">
+                <h1 class="fade-up">How may we serve you?</h1>
+                <form action="/" method="post">
+                    <div class="person-details" id="field">
+                        <h2>Contact Details</h2>
+            
+                        <div class="form-item">
+                            <label for="firstname">First name: </label>
+                            <input type="text" id="firstname" name="firstname">
+                        </div><!-- end form-item -->
+                    
+                        <div class="form-item">
+                            <label for="lastname">Last name: </label>
+                            <input type="text" id="lastname" name="lastname">
+                        </div><!-- end form-item -->
+
+                        <div class="form-item">
+                            <label for="phone">Phone: </label>
+                            <input type="phone" id="phone" name="phone">
+                        </div><!-- end form-item -->
+            
+                        <div class="form-item">
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email">
+                        </div><!-- end form-item -->
+                    </div>
+
+                    <div class="delivery delivery-radio" id="field">
+                        <h2>Delivery Options</h2>
+            
+                        <div class="form-item delivery">
+                            <input type="radio" name="delivery-type" id="pick-up">
+                            <label for="pick-up"><span>In-store Pick-up </span></label>
+                        </div><!-- end form-item -->
+                        
+                        <div class="form-item delivery">
+                            <input type="radio" name="delivery-type" id="delivery">
+                            <label for="delivery"><span>On-site Delivery </span></label>
+                        </div><!-- end form-item -->	
+                    </div>
+
+                    <div class="order" id="field">
+                        <h2>Menu Items</h2>
+            
+                        <div class="form-item">
+                            <input type="checkbox" name="catering-items" id="beverages">
+                            <label for="beverages"><span>Beverages </span></label>
+                        </div><!-- end form-item -->
+                        
+                        <div class="form-item">
+                            <input type="checkbox" name="catering-items" id="baked-goods">
+                            <label for="baked goods"><span>Baked Goods </span></label>
+                        </div><!-- end form-item -->
+
+                        <div class="form-item">
+                            <input type="checkbox" name="catering-items" id="hot-meals">
+                            <label for="hot meals"><span>Hot Meals </span></label>
+                        </div><!-- end form-item -->
+                    </div>
+                    
+                    <div class="branch" id="field">
+                        <h2>Select a Branch</h2>
+                        <br>
+                        <div class="form-item">
+                                <div class="select-wrap">
+                                    <select name="branch" id="branch" class="form-item__element form-item__element--select">
+                                        <option value="Any" selected>None</option>
+                                        <option value="Kitsilano">Kitsilano</option>
+                                        <option value="West End">West End</option>
+                                        <option value="Olympic Village">Olympic Village</option>
+                                    </select>
+                                </div>
+                        </div><!-- end form-item -->
+                    </div>
+
+                    <div class="feedback" id="field">
+                        <h2>Additional Information</h2>
+            
+                        <div class="form-item">
+                            <label for="comments">Tell us about your event.</label>
+                            <textarea name="comments" id="comments"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <input value="Book Now" type="submit" disabled="disabled">
+                    </div>  
+                </form>
+            </div>
+            </section>
+        </div>
+        <a href="#" class="return"><i class="fa fa-angle-up"></i></a>
+        <footer>
+            <div class="row row-footer">
+                <!--one column-->
+                <div class="three-col footer-main">
+                    <a href="menu.html"><h3>Menu</h3></a>
+                    <a href="catering.html"><h3>Catering</h3></a>
+                    <a href="our-story.html"><h3>Our Story</h3></a>
+                </div>
+                <!--two column-->
+                <div class="three-col">
+                    <a href="contact-us.html"><h3>Contact</h3></a>
+                    <p><a href="#">+1 000-123-4567</a></p>
+                    <p><a href="#">info@impresso.cafe</a></p>
+                </div>
+                <!--three column-->
+                <div class="three-col social">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li><a href="#" class="social facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="social twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="social instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <span><p>Copyright © 2019 Nina | Zahra. For educational purposes only.</p></span>
+        </footer>
+    </div>      
+<!-- JS -->
+<script src="scripts/jquery.js"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>

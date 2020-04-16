@@ -1,0 +1,154 @@
+body {
+  scroll-behavior: smooth;
+}
+.index{
+  top: auto;
+  left: auto;
+  background-color:$footer-bg-color;
+  @include ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main {
+  background: url('../images/index-header.gif') no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.row-header, .row-process {
+  display: flex;
+  flex-direction: column;
+flex-wrap: wrap;
+  justify-content: space-between;
+  
+  @include mq($tabletPortrait){
+      flex-direction: row;
+  }
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  text-align: center;
+  & .row {
+    align-items: center;
+  }
+  & .btn {
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 12px 22px;
+  margin-top: 28px;
+  opacity: 0.7;
+  }
+  & .txt {
+    color: $offwhite;
+  }
+  & h1 {
+    font-family: $brand-font;
+    font-weight: 400;
+  }
+  & h3 {
+    font-family: $header-font;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  & .title {
+    margin-top: 10%;
+  }
+}
+
+#process
+ {
+  padding-top: 100px;
+  text-align: center;
+  background-color: $offwhite;
+  & .col-md-4 {
+    padding-bottom: 100px;
+  }
+  
+  & .process-thumb {
+  position: relative;
+  margin-top: 32px;
+  }
+
+  & img {
+    max-width: 150px;
+    padding-bottom: 12px;
+  }
+  
+  // & .process-icon .fas {
+  // background-color: #f9f9f9;
+  // font-size: 32px;
+  // color: #333;
+  // width: 100px;
+  // height: 100px;
+  // line-height: 100px;
+  // position: relative;
+  // -webkit-border-radius: 50%;
+  // -moz-border-radius: 50%;
+  // -ms-border-radius: 50%;
+  // border-radius: 50%;
+  // text-align: center;
+  // transition: all 0.4s ease-in-out;
+  // }
+}
+
+.readmore {
+  color: $footer-bg-color;
+  opacity: 0.8;
+  cursor: pointer;
+  @include ease;
+  &:hover,
+  &:active{
+    opacity: 1;
+    & .fas {
+      @include ease;
+      margin-left: 12px;
+    }
+  }
+}
+
+// media queries
+@include mq($phoneLandscape) {
+
+  #home {
+    height: 70vh;
+    & h1 {
+      font-size: 3.5rem;
+    }
+    & h3 {
+      font-size: 2rem;
+    }
+    & .title {
+      margin-top: 0;
+      margin: 0 auto;
+    }
+  } 
+
+  #process{
+    margin-top: 45px;
+    padding-bottom: 0;
+  }
+
+}
+
+@media (min-width: 980px) {
+  #home {
+    height: 65vh;
+  }
+  #process {
+    padding-top: 100px;
+  }
+}
+
+
+
+

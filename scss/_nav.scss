@@ -1,0 +1,214 @@
+// general settings of the top nav bar
+.nav-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:$nav-bg-color;
+    padding: 0;
+    @include ease;
+
+    @include mq($tabletPortrait){
+        padding: 0.3rem 0.8rem;
+    }
+
+    //changing the logos between mobile and non mobile devises
+    .non-mobile img{
+        display: none;
+        @include mq($phoneLandscape){
+                display: block;
+            }
+    }
+
+    .mobile img{
+        display: block;
+        @include mq($phoneLandscape){
+                display: none;
+            }
+    }
+    //end of changing the logo
+
+    //changing the size of the logo over different screens
+    .logo img{ 
+        height: 40px;
+        margin: 5px 10px 5px 20px;
+        @include mq($phoneLandscape){
+            height: 60px;
+        }
+        @include mq($tabletPortrait){
+            height: 70px;
+        }
+        @include mq($desktopMedium){
+            height: 75px;
+        }
+    }
+    
+    // positioning the items in the menu (hamburger and logo)
+    // to be as far as possible over the nav bar
+    .logo{
+        flex: 1;
+    }
+}
+
+// styling the hamburger button
+// and animating its change over the click
+.hamburger {
+    
+    display: block;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 10px 20px;
+    cursor: pointer;
+
+    .hamburger-content {
+        display: block;
+        color: $fontColor;
+        height: 24px;
+    }
+
+    .text {
+        @include visually-hidden;
+    }
+
+    .bar {
+        //creating and animating the hamburger menu icon
+        $transition: all 0.3s ease-in-out;
+        $bar-height: 3px;
+        @mixin bar($pos-neg: '') {
+            content: "";
+            width: 100%;
+            height: $bar-height;
+            top: #{$pos-neg}10px;
+            left: 0;
+            background-color: white;
+            position: absolute;
+            transition: $transition;
+            .show & {
+                top: 0;
+                transform: rotate(#{$pos-neg}45deg);
+            }
+        }
+
+        display: block;
+        height: $bar-height;
+        background-color: $text-color-light;
+        width: 100%;
+        position: relative;
+        top: 10px;
+        transition: $transition;
+
+        .show & {
+            background-color: transparent;
+        }
+
+        &:after {
+            @include bar;
+        }
+        &:before {
+            @include bar('-');
+        }
+    }
+
+    &:focus,
+    .hamburger-content:focus {
+        outline: none;
+    }
+
+    &:focus .hamburger-content {
+        outline: 5px solid white;
+    }
+
+    // disabling hamburger icon for divises wider than 670px
+    @include mq($phoneLandscape){
+        display: none;
+    }
+}
+
+
+nav{
+    a {
+        display: block;
+        padding:$nav-padding;
+        color: $fontColor;
+        line-height: 1;
+        font-family: $header-font;
+        font-weight: 300;
+        text-decoration: none;
+        outline: none;
+        #{$link-hover-selector} {
+            background-color: $nav-hover-color;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+            @include ease;
+        }
+    }
+    ul {
+        @include flatten;
+        list-style: none;
+        background-color:$nav-bg-color;
+    }
+
+    // dropdown menu for mobile screen devices 
+    //(width less than 670px)
+        max-height: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        .show &{
+            max-height: 1000px;
+        }
+
+        ul {
+            transform: translateY(-100%);
+            -webkit-transition: all .3s linear;
+            transition: all .3s linear;
+            .show &{
+                transform: translateY(0);
+            }
+        }
+    // end of dropdown menu for mobile screen devices 
+    
+    // dropdown menu for landscape mobile or larger screen devices 
+    //(width more than 670px)
+    @include mq($phoneLandscape){
+        // resetting the drop down menu setting and
+        // restyling for no hamburger button
+        position: unset;
+        max-height: 100%;
+        overflow: unset;
+        ul{
+            transform: translateY(0);
+            transition: none;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: transparent;
+        }
+        a{
+            #{$link-hover-selector} {
+                @include hyperlinks;
+                padding-bottom: 0.8rem;
+                }
+        }
+    }
+    @include mq($tabletPortrait){
+
+        a{
+            font-size: 1.2em;
+        }
+    }
+
+    @include mq($desktopMedium){
+
+        a{
+            font-size: 1.3em;
+        }
+    }
+}

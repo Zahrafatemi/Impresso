@@ -1,0 +1,20 @@
+// Body Styles
+@include fade-in;
+@include fade-up;
+
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, li {
+    font-family: $header-font;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h3, p, a, label {
+    font-family: $body-font;
+}

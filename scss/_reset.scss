@@ -1,0 +1,43 @@
+// Resets
+
+// Box Sizing Reset
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*{
+    outline: none;
+}
+
+// Image Reset
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }
+
+// Table Reset
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Remove styles in the body + en
+body, h1, h2, h3, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}

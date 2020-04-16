@@ -1,0 +1,14 @@
+.btn {
+    background-color: $offwhite;
+    border:none;
+    border-radius: 4px;
+    font-family: $body-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+    background: #000000;
+    color: $offwhite;
+}

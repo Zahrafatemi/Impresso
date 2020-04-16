@@ -1,0 +1,261 @@
+.catering-wrapper{
+  background-color: $offwhite;
+  width: 100%;
+  // border: $border-test;
+  & header h1{
+    position: absolute;
+    color: $offwhite;
+    font-family: $brand-font;
+    font-weight: 400;
+    font-size: 2rem;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include mq(400px){
+      font-size: 3rem;
+    }
+    @include mq($phoneLandscape){
+      font-size: 4rem;
+    }
+  }
+}
+
+.catering-bg{
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+              url('../images/catering-1.jpg') no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 60vh;
+}
+
+.catering-wrapper section{
+  font-family: $header-font;
+
+  h1{
+    // border: $border-test;
+    font-size: 1.3em;
+    line-height: 1;
+    text-align: center;
+    
+    @include mq(670px){
+      font-size: 1.6em;
+      line-height: 1.6;
+
+      @include mq(900px){
+        font-size: 2em;
+        line-height: 2.2;
+
+        @include mq(1300px){
+          font-size: 2.3em;
+          line-height: 2.6;
+
+          @include mq(1500px){
+            font-size: 3em;
+            line-height: 3.5;
+          }
+        }
+      }
+    }
+
+  } 
+  
+  h2{
+    font-size: 1em;
+
+    @include mq(900px){
+      font-size: 1.3em;
+      line-height: 1.4;
+
+      @include mq(1300px){
+        font-size: 1.7em;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  /* all the forms - everything 
+  between header and footer*/
+  .catering-form{
+    // border: $border-test;
+    width: 80%;
+    margin: 10px auto;
+    padding-bottom: 10px;
+  }
+}
+
+label span {
+  @include mq(1300px){
+    margin-left: 15px;
+  }
+}
+
+/* for each form area */
+div #field{
+  margin: 0 auto;
+  margin: 10px 0;
+  padding: 10px;
+  display: block;
+  border-top: 2px solid rgb(112, 82, 69);
+}
+
+.form-item{
+  margin: 0 5px;
+  label{
+    display: block;
+    text-align: left;
+    font-family: $body-font;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 3px 0;
+    margin: 3px 0;
+  }
+}
+
+.person-details input{
+  width: 100%;
+  max-width: 400px;
+  height: 25px;
+
+  @include mq(1300px){
+    height: 40px;
+  }
+}
+
+/* Delivery radio buttons*/ 
+.delivery {
+  input {
+  visibility: hidden;
+  }
+
+ label {
+  position: relative;
+  margin: 0 0 0 20px;
+  }
+
+ label:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #dfdfdf;
+  top: 5px;
+  left: -20px;
+  border-radius: 50%;
+  border: 1px solid $nav-hover-color;
+
+  @include mq(1300px){
+    width: 20px;
+    height: 20px;
+  }
+  }
+
+ input:checked ~ label:before {
+  background-color: white;
+  border: 6px solid #2aa1c0;
+  }
+}
+
+.order {
+  input {
+  visibility: hidden;
+  }
+
+ label {
+  position: relative;
+  margin: 0 0 0 20px;
+  }
+
+ label:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #dfdfdf;
+  top: 5px;
+  left: -20px;
+  border-radius: 5%;
+  border: 1px solid rgb(201, 149, 114);
+
+  @include mq(1300px){
+    width: 20px;
+    height: 20px;
+  }
+  }
+
+
+ input:checked ~ label:before {
+  background-color: white;
+  border: 6px solid #2aa1c0;
+  }
+}
+
+#branch{
+  background-color: #fff;
+}
+
+.form-item__element {
+  padding: 0.1em 0.5em;
+  vertical-align: middle;
+  background: rgb(218, 216, 216);
+  border-radius: 0;
+  border: 0px white;
+
+  width: 100%; 
+  max-width:400px;
+  height: 30px;
+
+  @include mq(1300px){
+    height: 40px;
+  }
+}
+
+.form-item__element--select {
+appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+padding-right: 2em;
+color: gray; 
+}
+
+.select-wrap {
+  &::after {
+    margin-left: -2em;
+    font-size: 0.5em;
+    pointer-events: none;
+    content: '▼';
+    color: black;
+  }
+}
+
+textarea{
+  width: 100%; 
+  max-width:400px;
+  height: 150px;
+  margin-top: 5px;
+
+   @include mq(1300px){
+    height:250px;
+  }
+}
+
+.submit-button{
+  margin: 30px 10px;
+  input{
+      display: block;
+      background-color: $light-brown;
+      border:none;
+      color: white;
+      font-size: 1.5em;
+      font-family: $header-font;
+      text-transform: uppercase;
+      width: 100%;
+      height: 30px; 
+
+      @include mq(1300px){
+        height: 40px;
+        font-size: 1.7em;
+      }
+  }
+}

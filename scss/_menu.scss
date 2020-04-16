@@ -1,0 +1,108 @@
+/* menu styles */
+.row-menu{
+    display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    
+    @include mq($tabletPortrait){
+        flex-direction: row;
+    }
+
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.menu-wrapper {
+    background-color: $offwhite;
+    width: 100%;
+    // border: $border-test;
+    & header h1{
+      position: absolute;
+      color: $offwhite;
+      font-family: $brand-font;
+      font-weight: 400;
+      font-size: 2rem;
+      top: 30%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      @include mq(400px){
+        font-size: 3rem;
+      }
+      @include mq($phoneLandscape){
+        font-size: 4rem;
+      }
+    }
+  }
+  
+  .menu-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                url('../images/menu-1.jpg') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 80%;
+    height: 60vh;
+  }
+  
+
+ #menu {
+
+    & .menu-plan {
+        border-radius: 2px;
+        padding: 62px 32px;
+        margin-top: 32px;
+        text-align: center;
+      }
+      & .menu-type h2 {
+        font-size: 42px;
+      }
+      
+      & .menu-plan-bg {
+        color: #ffffff !important;
+        border-radius: 10px;
+      }
+
+      & .beverages {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                url('../images/beverages.jpg') no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      & .baked-goods {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+        url('../images/baked-goods.jpg') no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+
+      }
+      & .hot-food {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+        url('../images/hot-food.jpg') no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: 50% 100%;
+      }
+      
+      & .menu-title {
+        padding: 20px;
+      }
+      
+      & .menu-plan .btn {
+        background-color: #111112;
+        color: #ffffff;
+        padding: 12px 26px;
+        letter-spacing: 2px;
+        margin-top: 22px;
+      }
+      
+     & .menu-plan  .btn:hover {
+        background: #323232;
+      }
+
+ }
+
+  

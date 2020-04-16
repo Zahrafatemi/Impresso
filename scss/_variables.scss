@@ -1,0 +1,38 @@
+//Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:300,400,700|Vast+Shadow&display=swap');
+
+// Font Variables
+$header-font: 'Roboto Condensed', sans-serif;   
+$body-font: 'Open Sans', sans-serif;
+$brand-font: 'Vast Shadow', serif;
+
+//Links
+$link-hover-selector: '&:hover, &:focus, &:active';
+
+//Media Queries
+$desktopMedium: 1250px;
+$tabletLandscape: 1024px;
+$tabletPortrait: 850px;
+$phoneLandscape: 670px;
+$phonePortrait: 320px;
+
+$landscape: landscape;
+$portrait: portrait;
+
+//Nav
+$nav-padding : 20px;
+$med-nav-padding:10px;
+
+//Colors
+$default-bg: #ebebeb;
+$nav-bg-color:rgba(53, 40, 38, 0.5);
+$nav-hover-color: rgba(78, 60, 57, 0.886);
+$light-brown: #71564b;
+$offwhite: #F3EAE5;
+$about-brown: rgb(99, 68, 60);
+$footer-bg-color: rgb(53, 40, 38);
+
+$fontColor:white;
+$text-color-light:white;
+
+

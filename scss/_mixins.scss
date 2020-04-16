@@ -1,0 +1,108 @@
+@mixin mq($w){
+    @media (min-width: $w){
+        @content;
+    }
+}
+
+@mixin mqo($w,$o){
+    @media only screen and (min-width:$w) and (orientation: $o) {
+        @content;
+    }
+}
+
+@mixin mo($o){
+    @media only screen and (orientation: $o) {
+        @content;
+    }
+}
+
+@mixin visually-hidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+@mixin flatten {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+@mixin fade-in {
+  .fade-in {
+      animation: fadeIn ease 3s;
+      -webkit-animation: fadeIn ease 3s;
+      -moz-animation: fadeIn ease 3s;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-moz-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+}
+
+@mixin fade-up {
+  .fade-up {
+    animation: fadeInUp ease 1s;
+    -webkit-animation: fadeInUp ease 1s;
+    -moz-animation: fadeInUp ease 1s;
+  }
+  @keyframes fadeInUp {
+    0% {
+      -webkit-transform: translate3d(0,100%,0);
+      opacity: 0;
+      transform: translate3d(0,100%,0);
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+ @mixin ease {
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+ }
+
+ @mixin hyperlinks {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 1.0);
+ }

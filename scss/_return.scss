@@ -1,0 +1,20 @@
+.return {
+    display: none;
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 1px 2px 12px 0px rgba( 0, 0, 0, .14 );
+    bottom: 2em;
+    right: 2em;
+    color: $footer-bg-color;
+    font-size: 26px;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100%;
+  }
+  
+  .return:hover {
+      background: $footer-bg-color;
+      color: #ffffff;
+  }
